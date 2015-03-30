@@ -1,0 +1,10 @@
+{
+  "name": "sim-sample-service",
+  "version": "1.0.0",
+  "description": "A sample service to be sim tested.",
+  "author": "Ryan Neufeld <ryan@homegrown.io>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.12.3"
+  }
+}
