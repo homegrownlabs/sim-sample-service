@@ -10,6 +10,8 @@
 var express = require('express');
 
 var PORT = process.env.PORT || 8080;
+var git_repo = process.env.GIT_REPO;
+var git_sha  = process.env.GIT_SHA;
 var count = 0;
 
 var app = express();
@@ -18,7 +20,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/version', function (req, res) {
-  res.status(200).send({version: "1.0.0"})
+  res.status(200).send({repo: git_repo,
+                        sha:  git_sha})
 });
 
 app.put('/inc', function (req, res) {

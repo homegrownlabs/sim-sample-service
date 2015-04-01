@@ -4,6 +4,7 @@ EXPOSE 8080
 
 ADD package.json package.json
 ADD app.js app.js
+ADD version.env version.env
 
 RUN npm install express --save
-CMD ["node", "app.js"]
+CMD env $(cat version.env) node app.js
