@@ -9,17 +9,23 @@ This service exposes four endpoints:
 - `PUT /inc`     - Increment the service count. Returns 204.
 - `PUT /dec`     - Decrement the service count. Returns 204.
 
-## Running the service
+## Running the Service
 
 Via Docker:
 
-```
-$ docker run --tty --port 8080:8080 homegrownlabs/sample-service
+```sh
+$ ./run-service.sh
 ```
 
 Via Node:
 
-```
+```sh
 $ npm install
 $ node app.js
+```
+
+## Building the Service
+
+```sh
+$ ./build.sh
 ```

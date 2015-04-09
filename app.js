@@ -8,6 +8,7 @@
  * - PUT /dec     - Decrement the service count. Returns 204.
  */
 var express = require('express');
+var morgan = require('morgan');
 
 var PORT = process.env.PORT || 8080;
 var git_repo = process.env.GIT_REPO;
@@ -15,6 +16,9 @@ var git_sha  = process.env.GIT_SHA;
 var count = 0;
 
 var app = express();
+
+app.use(morgan('[:date[iso]] :method :url\t:status'));
+
 app.get('/', function (req, res) {
   res.status(200).send({count: count});
 });
